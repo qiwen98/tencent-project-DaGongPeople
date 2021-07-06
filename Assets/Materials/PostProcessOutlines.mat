@@ -23,7 +23,7 @@ Material:
   m_Name: PostProcessOutlines
   m_Shader: {fileID: -6465566751694194690, guid: 4f471010325629b40a8b1503eec78f59,
     type: 3}
-  m_ShaderKeywords: REQUIRE_DEPTH_TEXTURE
+  m_ShaderKeywords: REQUIRE_DEPTH_TEXTURE  REQUIRE_OPAQUE_TEXTURE
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -62,10 +62,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_7268EA8E: 1
-    - Vector1_7339F445: -1.56
-    - Vector1_7B3E30E1: 1
-    - Vector1_9E3DB884: 1
+    - Vector1_1929D0E5: 1
+    - Vector1_54F95ED2: 1.21
+    - Vector1_5A2E8EB4: 1
+    - Vector1_7268EA8E: 1.26
+    - Vector1_7339F445: 0.002
+    - Vector1_7B3E30E1: 0.12
+    - Vector1_9E3DB884: 3.87
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -88,7 +91,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_D80EDC1B: {r: 0, g: 0, b: 0, a: 1}
+    - Color_D80EDC1B: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
