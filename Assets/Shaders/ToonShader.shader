@@ -17,6 +17,9 @@
 			// Control how smoothly the rim blends when approaching unlit
 			// parts of the surface.
 			_RimThreshold("Rim Threshold", Range(0, 1)) = 0.1
+					_Speed("Speed", Float) = 0
+		_Frequency("Frequency", Float) = 0
+		_Distance("Distance", Float) = 0
 	}
 		SubShader
 		{
@@ -63,10 +66,15 @@
 
 			sampler2D _MainTex;
 			float4 _MainTex_ST;
+			float _Speed;
+			float _Frequency;
+			float _Distance;
 
 			v2f vert(appdata v)
 			{
 				v2f o;
+				float v1 = sin(_Time.y*_Speed + v.vertex.y*_Frequency);
+				v.vertex.x += v1 * _Distance;
 				o.pos = UnityObjectToClipPos(v.vertex);
 				o.worldNormal = UnityObjectToWorldNormal(v.normal);
 				o.viewDir = WorldSpaceViewDir(v.vertex);
