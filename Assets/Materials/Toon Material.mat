@@ -53,12 +53,10 @@ Material:
     - _BumpScale: 1
     - _Cull: 2
     - _Cutoff: 0.5
-
-    - _Distance: 0.17
+    - _Distance: -0.06
     - _DstBlend: 0
     - _EnvironmentReflections: 1
-    - _Frequency: 8.92
-
+    - _Frequency: 11.76
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
