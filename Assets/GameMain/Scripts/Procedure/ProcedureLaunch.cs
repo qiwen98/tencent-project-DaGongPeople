@@ -1,4 +1,8 @@
-﻿using GameFramework.Localization;
+﻿//------------------------------------------------------------
+// Game DaGong
+// Copyright © 2013-2021 DaGong Studio. All rights reserved.
+//------------------------------------------------------------
+using GameFramework.Localization;
 using System;
 using UnityGameFramework.Runtime;
 using ProcedureOwner = GameFramework.Fsm.IFsm<GameFramework.Procedure.IProcedureManager>;
@@ -37,7 +41,7 @@ namespace DaGong
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
             // 运行一帧即切换到 Splash 展示流程, Splash为我们的启动动画
-            //ChangeState<ProcedureSplash>(procedureOwner);
+            ChangeState<ProcedureSplash>(procedureOwner);
         }
 
         private void InitSoundSettings()
