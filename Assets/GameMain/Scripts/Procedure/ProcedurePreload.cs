@@ -17,7 +17,8 @@ namespace DaGong
     {
         public static readonly string[] DataTableNames = new string[]
         {
-            "Test"
+            "Test",
+            "Scene"
         };
 
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
@@ -70,8 +71,8 @@ namespace DaGong
                 }
             }
 
-            //procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
-            //ChangeState<ProcedureChangeScene>(procedureOwner);
+            procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Menu"));
+            ChangeState<ProcedureChangeScene>(procedureOwner);
         }
 
         private void PreloadResources()

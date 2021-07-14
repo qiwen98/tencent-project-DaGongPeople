@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Examples/Demo4_Event/Demo4.unity
     guid: a07a050349b1a4f6e85ba0e906d80161
+  - enabled: 1
+    path: Assets/GameMain/Scenes/Menu.unity
+    guid: 20afbfafb5bca634b899438e3ca16dcf
   m_configObjects: {}
