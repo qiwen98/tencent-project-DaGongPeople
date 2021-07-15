@@ -83,7 +83,7 @@ namespace DaGong
 
         protected override void OnUpdate(ProcedureOwner procedureOwner, float elapseSeconds, float realElapseSeconds)
         {
-            /*
+            
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
             if (!m_IsChangeSceneComplete)
@@ -97,9 +97,9 @@ namespace DaGong
             }
             else
             {
-                ChangeState<ProcedureMain>(procedureOwner);
+                //ChangeState<ProcedureMain>(procedureOwner);
             }
-            */
+            
         }
 
         private void OnLoadSceneSuccess(object sender, GameEventArgs e)

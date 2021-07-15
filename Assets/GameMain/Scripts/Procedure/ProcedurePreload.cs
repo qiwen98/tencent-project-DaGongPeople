@@ -18,7 +18,11 @@ namespace DaGong
         public static readonly string[] DataTableNames = new string[]
         {
             "Test",
-            "Scene"
+            "Scene",
+            "Music",
+            "Sound",
+            "UIForm",
+            "UISound"
         };
 
         private Dictionary<string, bool> m_LoadedFlag = new Dictionary<string, bool>();
@@ -89,10 +93,10 @@ namespace DaGong
             
 
             // 读取字典
-            //LoadDictionary("Default");
+            LoadDictionary("Default");
 
             // 读取渲染字体
-            //LoadFont("MainFont");
+            LoadFont("MainFont");
         }
 
         private void LoadConfig(string configName)
@@ -113,16 +117,14 @@ namespace DaGong
 
         private void LoadDictionary(string dictionaryName)
         {
-            /*
             string dictionaryAssetName = AssetUtility.GetDictionaryAsset(dictionaryName, false);
             m_LoadedFlag.Add(dictionaryAssetName, false);
-            GameEntry.Localization.ReadData(dictionaryAssetName, this);
-            */
+            GameEntry.Localization.ReadData(dictionaryAssetName, this); 
         }
 
         private void LoadFont(string fontName)
         {
-            /*
+            
             m_LoadedFlag.Add(Utility.Text.Format("Font.{0}", fontName), false);
             GameEntry.Resource.LoadAsset(AssetUtility.GetFontAsset(fontName), Constant.AssetPriority.FontAsset, new LoadAssetCallbacks(
                 (assetName, asset, duration, userData) =>
@@ -136,7 +138,7 @@ namespace DaGong
                 {
                     Log.Error("Can not load font '{0}' from '{1}' with error message '{2}'.", fontName, assetName, errorMessage);
                 }));
-            */
+            
         }
 
         private void OnLoadConfigSuccess(object sender, GameEventArgs e)
