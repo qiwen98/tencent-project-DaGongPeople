@@ -707,7 +707,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1189269576
+--- !u!21 &1219278818
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -812,17 +812,17 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 01397c380658f364da15997e6ff3680a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.77
+      value: -1.62
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 01397c380658f364da15997e6ff3680a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.81
+      value: 1.32
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 01397c380658f364da15997e6ff3680a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2.55
+      value: -2.1
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 01397c380658f364da15997e6ff3680a,
         type: 3}
@@ -868,7 +868,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 1189269576}
+      objectReference: {fileID: 1219278818}
     - target: {fileID: -927199367670048503, guid: 01397c380658f364da15997e6ff3680a,
         type: 3}
       propertyPath: m_Name
