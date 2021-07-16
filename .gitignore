@@ -4,7 +4,7 @@
 [Bb]uild/
 [Bb]uilds/
 Assets/AssetStoreTools*
-Assets/PlayGround
+Assets/PlayGround*
 
 # Visual Studio cache directory
 .vs/
