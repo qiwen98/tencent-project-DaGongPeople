@@ -57,6 +57,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - Vector1_59D287DA: 20
+    - Vector1_73E95494: -1
+    - Vector1_8386602F: 10
     - _AlphaClip: 0
     - _Blend: 0
     - _BumpScale: 1
@@ -80,6 +83,8 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - Color_3BCD7F23: {r: 1, g: 1, b: 1, a: 0}
+    - Color_3F1C5342: {r: 1, g: 0.9481132, b: 0.9481132, a: 0}
+    - Color_D487AB2B: {r: 1, g: 1, b: 1, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
@@ -87,6 +92,8 @@ Material:
     - _L1_Dir: {r: 0.6981132, g: 0.5367569, b: 0.5367569, a: 0}
     - _L1_color: {r: 0, g: 0, b: 0, a: 0}
     - _L1_dir: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_color: {r: 0, g: 0, b: 0, a: 0}
+    - _L2_dir: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
 --- !u!114 &3427381017277882733
 MonoBehaviour:
