@@ -13,7 +13,7 @@ namespace DaGong
 {
     public class ProcedureMenu : ProcedureBase
     {
-        private bool m_StartGame = false;
+        private bool m_StartSelect = false;
         private MenuForm m_MenuForm = null;
 
         public override bool UseNativeDialog
@@ -24,9 +24,9 @@ namespace DaGong
             }
         }
 
-        public void StartGame()
+        public void StartSelect()
         {
-            m_StartGame = true;
+            m_StartSelect = true;
         }
 
         protected override void OnEnter(ProcedureOwner procedureOwner)
@@ -35,7 +35,7 @@ namespace DaGong
 
             GameEntry.Event.Subscribe(OpenUIFormSuccessEventArgs.EventId, OnOpenUIFormSuccess);
 
-            m_StartGame = false;
+            m_StartSelect = false;
             GameEntry.UI.OpenUIForm(UIFormId.MenuForm, this);
         }
 
@@ -56,11 +56,11 @@ namespace DaGong
         {
             base.OnUpdate(procedureOwner, elapseSeconds, realElapseSeconds);
 
-            if (m_StartGame)
+            if (m_StartSelect)
             {
-                //procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Main"));
+                procedureOwner.SetData<VarInt32>("NextSceneId", GameEntry.Config.GetInt("Scene.Select"));
                 //procedureOwner.SetData<VarByte>("GameMode", (byte)GameMode.Survival);
-                //ChangeState<ProcedureChangeScene>(procedureOwner);
+                ChangeState<ProcedureChangeScene>(procedureOwner);
             }
         }
 
