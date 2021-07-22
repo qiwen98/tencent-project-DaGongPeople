@@ -19,7 +19,7 @@ namespace DaGong
 
         public void OnStartButtonClick()
         {
-            m_ProcedureMenu.StartGame();
+            m_ProcedureMenu.StartSelect();
         }
 
         public void OnSettingButtonClick()
