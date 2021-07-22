@@ -13,10 +13,11 @@ namespace DaGong
     public class ProcedureChangeScene : ProcedureBase
     {
         private const int MenuSceneId = 1;
-
+        private const int SelectSceneID = 2;
         private bool m_ChangeToMenu = false;
         private bool m_IsChangeSceneComplete = false;
         private int m_BackgroundMusicId = 0;
+        private bool m_ChangeToSelect = false;
 
         public override bool UseNativeDialog
         {
@@ -58,6 +59,8 @@ namespace DaGong
 
             int sceneId = procedureOwner.GetData<VarInt32>("NextSceneId");
             m_ChangeToMenu = sceneId == MenuSceneId;
+            m_ChangeToSelect = sceneId == SelectSceneID;
+
             IDataTable<DRScene> dtScene = GameEntry.DataTable.GetDataTable<DRScene>();
             DRScene drScene = dtScene.GetDataRow(sceneId);
             if (drScene == null)
@@ -95,9 +98,9 @@ namespace DaGong
             {
                 ChangeState<ProcedureMenu>(procedureOwner);
             }
-            else
+            else if(m_ChangeToSelect)
             {
-                //ChangeState<ProcedureMain>(procedureOwner);
+                ChangeState<ProcedureSelect>(procedureOwner);
             }
             
         }
